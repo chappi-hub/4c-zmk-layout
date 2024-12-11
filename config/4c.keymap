@@ -84,62 +84,6 @@
         };
     };
 
-    behaviors {
-        o_oe: o_oe {
-            compatible = "zmk,behavior-hold-tap";
-            label = "O_OE";
-            bindings = <&de_oe>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-
-        o_oe_cap: o_oe_cap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "O_OE_CAP";
-            bindings = <&de_oe_cap>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-
-        de_ue: de_ue {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DE_UE";
-            bindings = <&de_ue>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-
-        de_ue_cap: de_ue_cap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DE_UE_CAP";
-            bindings = <&de_ue_cap>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-
-        de_ae: de_ae {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DE_AE";
-            bindings = <&de_ae>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-
-        de_ae_cap: de_ae_cap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DE_AE_CAP";
-            bindings = <&de_ae_cap>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
