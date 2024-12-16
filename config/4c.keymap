@@ -82,13 +82,6 @@
             bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_8 &kt LALT>;
             label = "DE_OE";
         };
-
-        klammer_auf: klammer_auf {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "KLAMMER_AUF";
-        };
     };
 
     behaviors {
