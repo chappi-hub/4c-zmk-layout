@@ -98,11 +98,11 @@
 
         BASE {
             bindings = <
-&kp ESC       &kp LC(LA(NON_US_BACKSLASH))  &kp NON_US_BACKSLASH  &kp LS(BACKSLASH)  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))    &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_0))  &kp LS(NUMBER_0)  &kp BACKSPACE
-&kp TAB       &kp Q                         &kp W                 &kp E              &kp R                 &kp T                   &kp Y             &kp U             &kp I                 &kp O                 &kp P             &kp LEFT_BRACKET
-&kp LEFT_WIN  &kp A                         &kp S                 &kp D              &kp F                 &kp G                   &kp H             &kp J             &kp K                 &kp L                 &kp SEMI          &kp APOS
-&kp LCTRL     &kp Z                         &kp X                 &kp C              &kp V                 &kp B                   &kp N             &kp M             &kp COMMA             &kp PERIOD            &kp SLASH         &kp ENTER
-&kp LEFT_ALT  &mo 1                         &kp SPACE             &mo 3              &kp LEFT_SHIFT                                                  &kp LEFT_SHIFT    &kp LEFT_GUI          &kp SPACE             &mo 1             &mo 2
+&kp ESC       &kp LC(LA(NON_US_BACKSLASH))  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LA(LC(NUMBER_8))  &kp LA(LC(NUMBER_9))    &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LA(LC(NUMBER_7))  &kp LA(LC(NUMBER_0))  &kp LS(NUMBER_0)  &kp BACKSPACE
+&kp TAB       &kp Q                         &kp W                 &kp E                     &kp R                 &kp T                   &kp Y             &kp U             &kp I                 &kp O                 &kp P             &kp LEFT_BRACKET
+&kp LEFT_WIN  &kp A                         &kp S                 &kp D                     &kp F                 &kp G                   &kp H             &kp J             &kp K                 &kp L                 &kp SEMI          &kp APOS
+&kp LCTRL     &kp Z                         &kp X                 &kp C                     &kp V                 &kp B                   &kp N             &kp M             &kp COMMA             &kp PERIOD            &kp SLASH         &kp ENTER
+&kp LEFT_ALT  &mo 1                         &kp SPACE             &mo 3                     &kp LEFT_SHIFT                                                  &kp LEFT_SHIFT    &kp LEFT_GUI          &kp SPACE             &mo 1             &mo 2
             >;
         };
 
