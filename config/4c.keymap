@@ -44,43 +44,93 @@
         de_ae_cap: de_ae_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_2 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_2 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_AE_CAP";
         };
 
         de_ae: de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_2 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_2 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_AE";
         };
 
         de_ue_cap: de_ue_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_4 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_4 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_UE_CAP";
         };
 
         de_ue: de_ue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_9 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_9 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_UE";
         };
 
         de_oe_cap: de_oe_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_3 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_3 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_OE_CAP";
         };
 
         de_oe: de_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_8 &kt LALT>;
+            bindings =
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_8 &kt LALT>,
+                <&macro_press>;
+
             label = "DE_OE";
+        };
+    };
+
+    behaviors {
+        a_ae: a_ae {
+            compatible = "zmk,behavior-hold-tap";
+            label = "A_AE";
+            bindings = <&de_ae>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
+            flavor = "tap-preferred";
+        };
+
+        u_ue: u_ue {
+            compatible = "zmk,behavior-hold-tap";
+            label = "U_UE";
+            bindings = <&de_ue>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
+            flavor = "tap-preferred";
+        };
+
+        o_oe: o_oe {
+            compatible = "zmk,behavior-hold-tap";
+            label = "O_OE";
+            bindings = <&de_oe>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -89,21 +139,21 @@
 
         BASE {
             bindings = <
-&kp ESC         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp NUMBER_0  &kp BACKSPACE
-&kp TAB         &kp Q         &kp W         &kp E         &kp R           &kp T           &kp Y         &kp U         &kp I         &kp O           &kp P         &kp ENTER
-&kp LEFT_SHIFT  &kp A         &kp S         &kp D         &kp F           &kp G           &kp H         &kp J         &kp K         &kp L           &kp SEMI      &kp APOS
-&kp LCTRL       &kp Z         &kp X         &kp C         &kp V           &kp B           &kp N         &kp M         &kp COMMA     &kp PERIOD      &kp SLASH     &kp RIGHT_SHIFT
-&mo 1           &kp LEFT_ALT  &kp SPACE     &kp LEFT_WIN  &kp LEFT_SHIFT                                &mo 3         &kp LEFT_GUI  &kp LEFT_SHIFT  &mo 1         &mo 2
+&kp ESC         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
+&kp TAB         &kp Q         &kp W         &kp E         &kp R           &kp T           &kp Y         &u_ue 0 U     &kp I         &o_oe 0 O     &kp P         &kp ENTER
+&kp LEFT_SHIFT  &a_ae 0 A     &kp S         &kp D         &kp F           &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp APOS
+&kp LCTRL       &kp Z         &kp X         &kp C         &kp V           &kp B           &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
+&mo 1           &kp LEFT_ALT  &kp SPACE     &sk LGUI      &kp LEFT_SHIFT                                &kp LSHFT     &sk LGUI      &kp SPACE     &mo 1         &mo 2
             >;
         };
 
         RSE {
             bindings = <
-&kp GRAVE       &trans        &trans     &trans        &trans          &trans                  &trans                 &trans      &trans        &kp MINUS       &kp EQUAL  &kp DELETE
-&kp TAB         &trans        &kp UP     &trans        &trans          &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans      &trans        &trans          &trans     &kp BACKSLASH
-&kp LEFT_SHIFT  &kp LEFT      &kp DOWN   &kp RIGHT     &trans          &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp C_PREV  &kp C_PP      &kp C_NEXT      &trans     &trans
-&kp LCTRL       &trans        &trans     &codeFence    &trans          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans      &kp C_VOL_DN  &kp C_VOL_UP    &trans     &trans
-&trans          &kp LEFT_ALT  &kp SPACE  &kp LEFT_GUI  &kp LEFT_SHIFT                                                 &kp SPACE   &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &trans
+&kp GRAVE  &trans        &trans     &trans        &trans          &trans                  &trans                &trans     &trans        &kp MINUS       &kp EQUAL  &kp DELETE
+&trans     &trans        &kp UP     &trans        &trans          &kp LA(LC(NUMBER_7))    &kp LC(LA(NUMBER_0))  &trans     &trans        &trans          &trans     &kp BACKSLASH
+&trans     &kp LEFT      &kp DOWN   &kp RIGHT     &trans          &kp LS(NUMBER_8)        &kp LS(NUMBER_9)      &none      &none         &none           &trans     &trans
+&trans     &trans        &trans     &codeFence    &trans          &kp LA(LC(NUMBER_8))    &kp LA(LC(NUMBER_9))  &trans     &none         &none           &trans     &trans
+&trans     &kp LEFT_ALT  &kp SPACE  &kp LEFT_GUI  &kp LEFT_SHIFT                                                &kp SPACE  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &trans
             >;
         };
 
