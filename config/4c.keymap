@@ -149,11 +149,11 @@
 
         RSE {
             bindings = <
-&trans  &trans  &trans                &trans                 &trans         &trans              &trans        &trans          &trans    &trans     &trans  &kp DELETE
-&trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp GRAVE           &trans        &kp HOME        &kp UP    &kp END    &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp PLUS            &kp KP_EQUAL  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN    &trans        &kp BACKSLASH   &none     &none      &trans  &trans
-&trans  &trans  &trans                &trans                 &trans                                           &trans          &trans    &trans     &trans  &trans
+&trans  &trans  &trans                &trans                 &trans         &trans              &trans     &trans          &trans    &trans     &trans  &kp DELETE
+&trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp GRAVE           &trans     &kp HOME        &kp UP    &kp END    &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp PLUS            &kp EQUAL  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN    &trans     &kp BACKSLASH   &none     &none      &trans  &trans
+&trans  &trans  &trans                &trans                 &trans                                        &trans          &trans    &trans     &trans  &trans
             >;
         };
 
